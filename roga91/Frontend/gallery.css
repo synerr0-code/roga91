@@ -1,0 +1,140 @@
+  *{     margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+     body {
+        font-family: 'Segoe UI', sans-serif;
+        line-height: 1.6;
+        color: var(--text-gray);
+        background-color: white;
+    }
+  
+  header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 30px;
+        background-color: #204387;
+        color: white;
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .header-cta {
+        background-color: #A51313;
+        color: white;
+        border: none;
+        padding: 8px 18px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .header-cta:hover {
+        background-color: darkred;
+    }
+
+    .menu-toggle {
+        display: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: white;
+    }
+
+
+    .logo {
+        max-width: 80px;
+    }
+
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    header button {
+        background-color: #A51313;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 7px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    header button:hover {
+        background-color: darkred;
+    }
+
+
+.gallery{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:20px;
+    margin-bottom: 50px;
+    margin-left:10px;
+    margin-right:10px
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    
+    height: 100%; /* or try auto, or set a max-height */
+}
+
+
+.grid-item img{
+    display: block;
+    width:100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+@media (max-width:600px){
+    .gallery{display:flex;
+    flex-direction: column;
+    }
+}
+
+@media (max-width: 900px){
+    .gallery{
+        grid-template-columns: repeat(2,2fr );
+    }
+}
+
+ @media (max-width: 768px) {
+        nav {
+            display: none;
+            flex-direction: column;
+            background-color: #204387;
+            position: absolute; 
+            top: 70px;
+            right: 0;
+            width: 100%;
+            padding: 20px;
+            z-index: 1000;
+        }
+
+        nav.show {
+            display: flex;
+        }
+
+        .menu-toggle {
+            display: block;
+        }
+    }

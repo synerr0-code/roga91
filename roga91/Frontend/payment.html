@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Securely make payments for ROGA91 events, dues, and contributions. Support the Reagan Memorial Baptist Girls’ School Class of 1991 and stay involved in our growing alumni community.">
+
+    <title>ROGA 91 - Payment Portal</title>
+    <link rel="stylesheet" href="payment.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">ROGA 91</h1>
+            <p class="subtitle">Make a Payment - Donations & Dues</p>
+        </header>
+
+        <main class="main-content">
+            <div class="payment-card">
+                <div class="card-header">
+                    <h2>Payment Portal</h2>
+                    
+                    <!-- Tab Navigation -->
+                    <div class="tab-container">
+                        <button class="tab-btn active" data-tab="donation">
+                            💝 Donation
+                        </button>
+                            <button class="tab-btn" data-tab="roga91_dues">
+                            🏛️ ROGA 91 Dues
+                        </button>
+                        <button class="tab-btn" data-tab="roga_national_dues">
+                            🇳🇬 ROGA National Dues
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <!-- Payment Form -->
+                    <form id="paymentForm" class="payment-form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="amount">Amount (₦) *</label>
+                            <input type="number" id="amount" name="amount" required min="100" placeholder="Enter amount in Naira">
+                        </div>
+                          <!-- Description Field - Only for Donations -->
+                        <div class="form-group" id="descriptionGroup">
+                            <label for="description">Description/Purpose</label>
+                            <textarea 
+                                id="description" 
+                                name="description" 
+                                rows="3" 
+                                 placeholder="Please describe the purpose of your donation (e.g., Support for community programs, Educational initiatives, General donation, etc.)"
+                            ></textarea>
+                           <small class="field-hint">Help us understand how you'd like your donation to be used (optional).</small>
+                        </div>
+
+                        <!-- Payment Type Info -->
+                        <div class="info-box" id="paymentInfo">
+                            <p id="infoText">💝 Your donation will support ROGA 91 activities and programs.</p>
+                        </div>
+
+                        <!-- Error Message -->
+                        <div class="error-message" id="errorMessage" style="display: none;"></div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <span id="btnText">Pay ₦0 - Donate</span>
+                            <div class="loading-spinner" id="loadingSpinner" style="display: none;"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Secured by Paystack • SSL Encrypted</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

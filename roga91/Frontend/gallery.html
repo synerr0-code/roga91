@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse the photo gallery of the Reagan Memorial Baptist Girls’ School Class of 1991 alumni. Relive unforgettable moments, events, and celebrations that highlight our enduring sisterhood and shared memories.">
+
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.webp">
+    <title>Gallery</title>
+</head>
+<body>
+    <header>
+        <img src="images/logo.webp" alt="Reagan High Logo" class="logo">
+
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+        <nav id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About us</a>
+            <a href="event.html">Events</a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=roga91alumni@gmail.com" target="_blank">Contact Us</a>
+            <a href="payment.html">Give to Roga91</a>
+            <button class="header-cta"><a href="payment.html">Get Involved</a></button>
+        </nav>
+    </header>
+    <section class="gallery">
+        <div class="grid">
+            <div class="grid-item">
+                <img src="gallery/DSC_8635.webp" width="600" height="400" alt="A Roga91 Event" loading="lazy">
+            </div>
+        </div>
+        <div class="grid">
+            <div class="grid-item">
+                <img src="gallery/DSC_8639.webp" width="600" height="400" alt="A Roga91 Event" loading="lazy">
+            </div>
+        </div>
+         <div class="grid">
+            <div class="grid-item">
+                <img src="gallery/DSC_8669.webp" width="600" height="400" alt="A Roga91 Event" loading="lazy">
+            </div>
+        </div>
+         <div class="grid">
+            <div class="grid-item">
+                <img src="gallery/DSC_8672.webp" width="600" height="400" alt="A Roga91 Event" loading="lazy">
+            </div>
+        </div>
+         <div class="grid">
+            <div class="grid-item">
+                <img src="gallery/DSC_8684.webp" width="600" height="400" alt="A Roga91 Event" loading="lazy">
+            </div>
+        </div>
+         <div class="grid">
+            <div class="grid-item">
+                <img src="gallery/DSC_8687.webp" width="600" height="400" alt="A Roga91 Event" loading="lazy">
+            </div>
+        </div>
+         <div class="grid">
+            <div class="grid-item">
+                <img src="gallery/DSC_8692.webp" width="600" height="400" alt="A Roga91 Event" loading="lazy">
+            </div>
+        </div>
+         <div class="grid">
+            <div class="grid-item">
+                <img src="gallery/DSC_8704.webp" width="600" height="400" alt="A Roga91 Event" loading="lazy">
+            </div>
+        </div>
+         <div class="grid">
+            <div class="grid-item">
+                <img src="gallery/DSC_8713.webp" width="600" height="400" alt="A Roga91 Event" loading="lazy">
+            </div>
+        </div>
+         <div class="grid">
+            <div class="grid-item">
+                <img src="gallery/DSC_8729.webp" width="600" height="400" alt="A Roga91 Event" loading="lazy">
+            </div>
+        </div>
+         <div class="grid">
+            <div class="grid-item">
+                <img src="gallery/DSC_8732.webp" width="600" height="400" alt="A Roga91 Event" loading="lazy">
+            </div>
+        </div>
+         <div class="grid">
+            <div class="grid-item">
+                <img src="gallery/DSC_8743.webp" width="600" height="400" alt="A Roga91 Event" loading="lazy">
+            </div>
+        </div>
+          <div class="grid">
+            <div class="grid-item">
+                <img src="gallery/DSC_8793.webp" width="600" height="400" alt="A Roga91 Event" loading="lazy">
+            </div>
+        </div>
+          <div class="grid">
+            <div class="grid-item">
+                <img src="gallery/DSC_8796.webp" width="600" height="400" alt="A Roga91 Event" loading="lazy">
+            </div>
+        </div>
+    </section>
+    <script>
+
+        document.addEventListener('contextmenu', function (e) {
+      if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+      }
+    });
+        const toggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        toggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
